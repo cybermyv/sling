@@ -1,16 +1,16 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { StaticDataSource } from "./model/static.datasource";
-import { ProductRepository } from "./model/product.repository";
-
+import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
-import { StoreComponent } from './store/store.component';
+import { StoreModule } from "./store/store.module";
+
+// import { StaticDataSource } from "./model/static.datasource";
+// import { ProductRepository } from "./model/product.repository";
+// import { StoreComponent } from './store/store.component';
 
 @NgModule({
-  declarations: [AppComponent, StoreComponent],
-  imports: [BrowserModule],
-
-  providers: [StaticDataSource, ProductRepository],
+  imports: [BrowserModule, StoreModule],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
+  // providers: [StaticDataSource, ProductRepository],
 })
 export class AppModule {}
